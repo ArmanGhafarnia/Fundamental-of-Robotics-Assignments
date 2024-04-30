@@ -1,0 +1,583 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/VarnishedPine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/samples/robotbenchmark/maze_runner/protos/MazeBlock.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/chairs/protos/WoodenChair.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Door.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/DoorLever.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Window.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/cabinet/protos/Cabinet.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/school_furniture/protos/Blackboard.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/school_furniture/protos/Clock.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/tables/protos/Desk.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/computers/protos/Laptop.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/animals/protos/Cat.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/chairs/protos/OfficeChair.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+  info [
+    "Benchmark objective: "
+    "move to the center of the maze as quickly as possible."
+  ]
+  title "Maze Runner"
+  window "maze_runner"
+  gravity 1
+  basicTimeStep 16
+  FPS 50
+  contactProperties [
+    ContactProperties {
+      softCFM 0.05
+    }
+    ContactProperties {
+      material2 "thymio body"
+      coulombFriction [
+        0.7
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.27221333589231106 -0.18014003715664215 0.9452245589147499 4.259538279217139
+  position 0.7845361465371927 1.4063926242984663 1.6824307609918079
+  followSmoothness 0.01
+}
+TexturedBackground {
+  texture "empty_office"
+}
+SpotLight {
+  attenuation 0 0 1
+  beamWidth 0.7
+  cutOffAngle 0.9
+  intensity 0.8
+  location 0.45 0 -1.6
+  radius 4
+  castShadows TRUE
+}
+Table {
+  translation 0.013061 -0.35907 0
+  rotation 0 0 1 4.692820414042842e-06
+  size 1 1.8 0.61
+  feetSize 0.4 0.05
+  feetPadding 0.1
+  trayAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/samples/robotbenchmark/maze_runner/worlds/textures/table_top.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+    textureTransform TextureTransform {
+      scale 0 1.8
+    }
+  }
+  legAppearance VarnishedPine {
+    colorOverride 1 1 1
+  }
+}
+DEF MAZE_WALLS Group {
+  children [
+    MazeBlock {
+      translation 2.7027975921525772e-06 -0.23999997621524172 0.609939826405699
+      rotation -1.7171639489427773e-05 1.2703266033511547e-05 -0.9999999997718808 1.5707998428965626
+      length 0.31
+    }
+    MazeBlock {
+      translation 0.07799919999999994 -0.4000000000000024 0.6099073750000003
+      rotation -9.373847019740761e-17 -8.650774795771729e-17 -1 1.570800058377147
+      name "maze block(7)"
+      length 0.475
+    }
+    MazeBlock {
+      translation -0.31527802727630566 0.02578050742645854 0.6099600986388096
+      rotation -0.01123469539174695 -0.06306350843801188 0.9979462788762445 0.007783680453406834
+      name "maze block(27)"
+      length 0.2
+    }
+    MazeBlock {
+      translation -0.230966324528159 -0.23999999200584438 0.6099701500060795
+      rotation 5.6519436188883216e-05 -6.107337443313682e-05 -0.999999996537798 1.5707998648090113
+      name "maze block(11)"
+      length 0.152
+    }
+    MazeBlock {
+      translation -0.155 -0.4628261107630936 0.6099805000000003
+      rotation 0.10123000427987705 0.9890350511928818 0.10752745577474346 2.2276016218421643e-16
+      name "maze block(1)"
+    }
+    MazeBlock {
+      translation -0.1552552677734405 -0.5627882028769183 0.6099817183000905
+      rotation -0.0012781442242891477 -0.16089195710930776 -0.9869711973937633 0.0054279705273127905
+      name "maze block(2)"
+      length 0.095
+    }
+    MazeBlock {
+      translation -0.09795326546461505 -0.5990000340634719 0.6099802583162257
+      rotation 0.0001261575051276705 -0.00010993212505995176 -0.9999999859996058 1.5707960774720566
+      name "maze block(3)"
+    }
+    MazeBlock {
+      translation 0.05200811421702921 -0.5990000087306891 0.6099609983836836
+      rotation -2.3106782930630482e-05 3.940200021550557e-05 -0.9999999989567795 1.5707959098919584
+      name "maze block(5)"
+      length 0.2
+    }
+    MazeBlock {
+      translation 0.16 -0.565996 0.6099844000000002
+      rotation -1.0031832710225759e-16 -1.5281173248005516e-17 1 3.141592307179525
+      name "maze block(6)"
+      length 0.08
+    }
+    MazeBlock {
+      translation 0.16287230591323043 -0.14999782513234775 0.6099613049459852
+      rotation 0.0004871744336766583 -3.462649202180926e-06 0.9999998813245337 3.1371939468241425
+      name "maze block(8)"
+      length 0.2
+    }
+    MazeBlock {
+      translation 0.05580172581180999 -0.06000127201595373 0.6099606286422352
+      rotation -7.346555509535005e-05 -7.486907771617237e-05 -0.9999999944987167 1.570797045261914
+      name "maze block(10)"
+      length 0.2
+    }
+    MazeBlock {
+      translation -0.3159993810898675 -0.17420170130851473 0.6099619013611903
+      rotation 0.174533474521807 0.9846510046967177 0.0006820711766819068 0.0006150728989475854
+      name "maze block(12)"
+      length 0.2
+    }
+    MazeBlock {
+      translation -0.316 -0.37660500000002306 0.6099610000000002
+      rotation -0.0154113223539132 0.9922089763286417 -0.12362782225766407 1.6718825525384004e-16
+      name "maze block(13)"
+      length 0.2
+    }
+    MazeBlock {
+      translation -0.316 -0.581 0.6099610000000002
+      rotation 0.0527012023139913 -0.6159159793144298 -0.7860471294393274 2.3817263931612297e-16
+      name "maze block(14)"
+      length 0.2
+    }
+    MazeBlock {
+      translation -0.316 -0.74 0.6099795250000002
+      rotation 0.1723647061205332 -0.9796455627383878 0.10288332950954485 1.7327959272370032e-16
+      name "maze block(15)"
+      length 0.105
+    }
+    MazeBlock {
+      translation -0.22046360540083246 -0.8029999999767131 0.6099620371893314
+      rotation -5.630788342677641e-05 -5.630739922139831e-05 0.9999999968294496 1.5707960034042703
+      name "maze block(16)"
+      length 0.2
+    }
+    MazeBlock {
+      translation -0.017001206604308858 -0.803000000008648 0.6099580004690278
+      rotation -8.992618695931443e-06 -8.992755926464758e-06 0.9999999999191317 1.5707960005594823
+      name "maze block(17)"
+      length 0.207
+    }
+    MazeBlock {
+      translation 0.20145555758960976 -0.8030000000380878 0.6099557473416407
+      rotation 4.6823840061119465e-05 4.6823019483499004e-05 0.9999999978075664 1.5707960024202063
+      name "maze block(18)"
+      length 0.23
+    }
+    MazeBlock {
+      translation 0.32480807998283234 -0.7117995009307602 0.6099609999984943
+      rotation -8.022979298558516e-12 -3.766273108423254e-11 1 0.008243268971638362
+      name "maze block(19)"
+      length 0.2
+    }
+    MazeBlock {
+      translation 0.324 -0.5086050000000232 0.6099610000000002
+      rotation 0.06230702504726965 0.9863981963997839 -0.15210664932543905 2.0793223240922163e-16
+      name "maze block(20)"
+      length 0.2
+    }
+    MazeBlock {
+      translation 0.3238738688341409 -0.30812699999962706 0.6099610000000002
+      rotation 9.785892559039536e-17 4.974397288290856e-18 1 3.1384100425028327
+      name "maze block(21)"
+      length 0.2
+    }
+    MazeBlock {
+      translation 0.324 -0.107 0.6099610000000002
+      rotation 0.10746673588120632 -0.9683437148031703 -0.22530279776388837 1.347678317602799e-16
+      name "maze block(22)"
+      length 0.2
+    }
+    MazeBlock {
+      translation 0.21814707498944652 0.12121799740026891 0.6099623076187819
+      rotation 9.30842163241916e-05 0.00020983176867914836 -0.9999999736529783 1.5683106684580435
+      name "maze block(24)"
+      length 0.2
+    }
+    MazeBlock {
+      translation 0.01818443320702389 0.12100001779666097 0.609958573559515
+      rotation -8.101258639011091e-05 -4.699782042451879e-05 -0.9999999956140829 1.5707957106680221
+      name "maze block(25)"
+      length 0.2
+    }
+    MazeBlock {
+      translation -0.1942835798401677 0.12099998798768787 0.6099572438217029
+      rotation -5.3374267074820705e-06 -0.0001221843735801409 -0.9999999925212454 1.5707963889151957
+      name "maze block(26)"
+      length 0.225
+    }
+  ]
+}
+Floor {
+  size 7.8 9.8
+  tileSize 1 1
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/worlds/textures/square_block_parquetry.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+}
+E-puck {
+  translation 0.14147581336047957 0.2999957939164343 0.6091650525783654
+  rotation -4.9886634756137534e-05 0.002904351194021413 0.9999957811188332 0.00034886738886320785
+  controller "my_controller"
+  turretSlot [
+    DistanceSensor {
+      translation 0.015 -0.03 0
+      rotation 0 0 1 -1.5707996938995747
+      name "right distance sensor"
+      lookupTable [
+        0 0 0
+        1 1 0
+      ]
+    }
+    DistanceSensor {
+      translation 0.015 0.03 0
+      rotation 0 0 1 1.5707996938995747
+      name "left distance sensor"
+      lookupTable [
+        0 0 0
+        1 1 0
+      ]
+    }
+    DistanceSensor {
+      translation 0.03 0.025 -0.02
+      rotation 0 0 1 0.7854003061004253
+      name "front left distance sensor"
+      lookupTable [
+        0 0 0
+        1 1 0
+      ]
+    }
+    DistanceSensor {
+      translation 0.03 -0.025 -0.02
+      rotation 0 0 1 -0.7853996938995746
+      name "front right distance sensor"
+      lookupTable [
+        0 0 0
+        1 1 0
+      ]
+    }
+    DistanceSensor {
+      translation 0.04 0 -0.02
+      name "front distance sensor"
+      lookupTable [
+        0 0 0
+        1 1 0
+      ]
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+}
+Cat {
+  translation -3.4 -2 0
+}
+Table {
+  translation 2.537584 -3.034086 0
+  rotation 0 0 -1 1.551161
+  name "table(2)"
+  size 1 1.8 0.61
+  feetSize 0.05 0.4
+  feetPadding 0.1
+}
+WoodenChair {
+  translation 2.346596 -3.515116 0
+  rotation 0 0 1 1.72788
+}
+WoodenChair {
+  translation 1.725845 1.933502 0
+  rotation 0 0 1 2.51327
+  name "wooden chair(2)"
+}
+WoodenChair {
+  translation 1.049235 2.894888 0
+  rotation 0 0 1 -2.199115
+  name "wooden chair(3)"
+}
+WoodenChair {
+  translation 1.988494 -0.561392 0
+  rotation 0 0 1 0.157079
+  name "wooden chair(4)"
+}
+WoodenChair {
+  translation 2.988262 -0.554259 0
+  rotation 0 0 -1 2.98451
+  name "wooden chair(5)"
+}
+WoodenChair {
+  translation -2.699813 -1.92895 0
+  rotation 0 0 -1 0.10472
+  name "wooden chair(6)"
+}
+WoodenChair {
+  translation -2.826003 -2.499953 0
+  rotation 0 0 1 0.15708
+  name "wooden chair(7)"
+}
+Door {
+  translation 0 5.005 -0.01
+  rotation 0 0 1 -1.570795
+  canBeOpen FALSE
+  doorHandle DoorLever {
+    hasStaticParent TRUE
+  }
+  castShadows FALSE
+}
+DEF CEILING Solid {
+  translation 0 0 2.4
+  rotation 0 -1 0 3.141593
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.415686 0.647059 0.545098
+        baseColorMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/samples/robotbenchmark/maze_runner/worlds/textures/wall.jpg"
+          ]
+        }
+        roughness 0.5
+        metalness 0
+        textureTransform TextureTransform {
+          scale 37 15
+        }
+      }
+      geometry Plane {
+        size 7.8 9.8
+      }
+      castShadows FALSE
+    }
+  ]
+  name "ceiling"
+}
+DEF DOOR_WALL Solid {
+  translation 0 4.9 1.2
+  rotation 0.5773496025226483 0.5773516025212714 -0.5773496025226483 2.094393
+  children [
+    Shape {
+      appearance DEF DOOR_WALL_APPEARANCE Roughcast {
+        colorOverride 0.415686 0.647059 0.545098
+        textureTransform TextureTransform {
+          scale 13 4
+        }
+      }
+      geometry DEF DOOR_WALL_SHAPE Plane {
+        size 2.4 7.8
+      }
+      castShadows FALSE
+    }
+  ]
+  name "wall"
+  boundingObject USE DOOR_WALL_SHAPE
+}
+DEF BACK_WALL Solid {
+  translation 0 -4.9 1.2
+  rotation 0.5773509358554485 -0.5773489358556708 -0.5773509358554485 4.188788
+  children [
+    Shape {
+      appearance USE DOOR_WALL_APPEARANCE
+      geometry Plane {
+        size 2.4 7.81
+      }
+      castShadows FALSE
+    }
+  ]
+  name "wall(1)"
+  boundingObject USE DOOR_WALL_SHAPE
+}
+DEF SHORT_WINDOW_WALL Solid {
+  translation 3.9 3.05 1.2
+  rotation -0.7071067811865476 0 0.7071067811865476 3.141595
+  children [
+    Shape {
+      appearance DEF SHORT_WALL_APPEARANCE Roughcast {
+        colorOverride 0.415686 0.647059 0.545098
+        textureTransform TextureTransform {
+          scale 5 4
+        }
+      }
+      geometry DEF SHORT_WINDOW_WALL_SHAPE Plane {
+        size 2.4 3.7
+      }
+      castShadows FALSE
+    }
+  ]
+  name "wall(2)"
+  boundingObject USE SHORT_WINDOW_WALL_SHAPE
+}
+DEF SHORT_WINDOW_WALL Solid {
+  translation -3.9 3.05 1.2
+  rotation 0 -1 0 4.712389
+  children [
+    Shape {
+      appearance USE SHORT_WALL_APPEARANCE
+      geometry Plane {
+        size 2.4 3.7
+      }
+      castShadows FALSE
+    }
+  ]
+  name "wall(3)"
+  boundingObject USE SHORT_WINDOW_WALL_SHAPE
+}
+DEF LONG_WINDOW_WALL Solid {
+  translation -3.9 -2.65 1.2
+  rotation 0 1 0 1.570796
+  children [
+    Shape {
+      appearance USE SHORT_WALL_APPEARANCE
+      geometry DEF LONG_WINDOW_WALL_SHAPE Plane {
+        size 2.4 4.5
+      }
+      castShadows FALSE
+    }
+  ]
+  name "wall(4)"
+  boundingObject USE LONG_WINDOW_WALL_SHAPE
+}
+DEF LONG_WINDOW_WALL Solid {
+  translation 3.9 -2.65 1.2
+  rotation -0.7071067811865476 0 0.7071067811865476 3.141595
+  children [
+    Shape {
+      appearance USE SHORT_WALL_APPEARANCE
+      geometry Plane {
+        size 2.4 4.5
+      }
+      castShadows FALSE
+    }
+  ]
+  name "wall(6)"
+  boundingObject USE LONG_WINDOW_WALL_SHAPE
+}
+Window {
+  translation 4 0 0
+  windowSillSize 0.1 0.04
+  wallAppearance DEF WINDOW_WALL_APPEARANCE Roughcast {
+    colorOverride 0.415686 0.647059 0.545098
+  }
+  castShadows FALSE
+}
+Window {
+  translation 4 0.8 0
+  name "window(1)"
+  windowSillSize 0.1 0.04
+  wallAppearance USE WINDOW_WALL_APPEARANCE
+  castShadows FALSE
+}
+Window {
+  translation -4 0 0
+  rotation 0 0 1 3.1415
+  name "window(2)"
+  windowSillSize 0.1 0.04
+  wallAppearance USE WINDOW_WALL_APPEARANCE
+  castShadows FALSE
+}
+Window {
+  translation -4 0.8 0
+  rotation 0 0 1 3.14159
+  name "window(3)"
+  windowSillSize 0.1 0.04
+  wallAppearance USE WINDOW_WALL_APPEARANCE
+  castShadows FALSE
+}
+Cabinet {
+  translation -3.876418 4.063253 0
+  columnsWidths [
+    0.7, 0.34, 0.17
+  ]
+}
+Blackboard {
+  translation 0 -4.87 1.19
+  rotation 0 0 1 1.57079
+  castShadows FALSE
+}
+Clock {
+  translation -2.4 -4.89 1.873
+  rotation 0 0 -1 -1.570795
+}
+DEF FINISH_LINE Solid {
+  translation -0.044528 3.4 0.01
+  rotation 0 0 1 3.141593
+  children [
+    Transform {
+      scale 0.97109691 0.97109691 0.97109691
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.862745 0.247059 0.254902
+            transparency 0.20000000298023224
+            roughness 0.32941200000000004
+            metalness 0
+          }
+          geometry Plane {
+            size 8.1 0.05
+          }
+        }
+      ]
+    }
+  ]
+}
+Desk {
+  translation -2.192716 0.275157 0
+}
+Desk {
+  translation -2.238663 -2.182488 0
+  name "desk(1)"
+}
+Desk {
+  translation 2.497135 -0.604735 0
+  name "desk(2)"
+}
+Desk {
+  translation 0.821767 2.344267 0
+  rotation 0 0 1 1.308997
+  name "desk(3)"
+}
+Laptop {
+  translation 2.520930044269559 -0.6520201468975273 0.7071037013869053
+  rotation -0.004915805393294481 -0.999987900201139 0.0001852259497231355 0.006606585881279364
+  controller "<none>"
+}
+Laptop {
+  translation -2.2317350444247914 0.21550515184590663 0.7071037013869051
+  rotation 0.003303246961362448 -1.6238870117172574e-05 0.9999945441330226 -3.141591765545955
+  name "laptop(1)"
+  controller "<none>"
+}
+TexturedBackgroundLight {
+}
+OfficeChair {
+  translation -3.000016848421309 0.29999835758706794 -0.0036069845921668786
+  rotation -0.008521125615386274 -0.9999513956922392 0.004959503139374449 0.003657923862758727
+}
