@@ -1,0 +1,54 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5771963302948366 0.5657663550877876 0.5888572218669424 2.0946309240604055
+  position -0.0037935728563388837 -0.05295545702708096 2.3166550561470083
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  rotation 0 1 0 4.692820414042842e-06
+}
+Wall {
+  translation 0.25 0 0
+  size 0.2 0.05 0.2
+}
+Wall {
+  translation 0.25 0.22 0
+  name "wall(1)"
+  size 0.2 0.05 0.2
+}
+Wall {
+  translation -0.27 -0.26 0
+  name "wall(2)"
+  size 0.2 0.05 0.2
+}
+Wall {
+  translation -0.27 0.17 0
+  name "wall(3)"
+  size 0.2 0.05 0.2
+}
+E-puck {
+  controller "control"
+  turretSlot [
+    Compass {
+    }
+    DistanceSensor {
+      lookupTable [
+        0 0 0
+        1 1 0
+      ]
+      type "laser"
+    }
+  ]
+}

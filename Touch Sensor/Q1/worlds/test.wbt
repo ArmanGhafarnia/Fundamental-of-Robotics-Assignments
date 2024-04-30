@@ -1,0 +1,34 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.586962956749736 0.5696129839854066 0.5753394961923338 2.1231605416254937
+  position -0.013661510100589316 -0.07767946814475803 1.55847116571293
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+E-puck {
+  hidden translation_1 0 0.026 0.02
+  hidden rotation_1 0 1 0 2.9802322387695313e-08
+  hidden translation_2 0 -0.026 0.02
+  hidden rotation_2 0 1 0 2.9802322387695313e-08
+  translation 2.0697051127108273e-18 -1.6610497021301766e-13 -7.893152134810094e-05
+  rotation 0.9999999999999946 -1.0379514260914033e-07 1.4632871581124344e-08 2.4348254371174004e-09
+  controller "control"
+  turretSlot [
+    Compass {
+    }
+    GPS {
+    }
+  ]
+}

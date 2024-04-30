@@ -1,0 +1,49 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.0014814036310325767 0.9999792406211372 -0.006270866770713144 0.46205840462041425
+  position -1.78679865258865 0.13861906209340266 1.1008960169114719
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+CardboardBox {
+  translation -1.6768109644021843e-17 0.33 0.049607599999999974
+  rotation 0.043269424749391314 0.0192308554441743 0.9988783364758401 4.433766794136045e-16
+  size 0.1 0.1 0.1
+  mass 1
+}
+E-puck {
+  hidden position_0_0 8.308693446924845
+  hidden position_0_1 8.308693446579426
+  hidden rotation_1 0 -1 0 4.257677167434327
+  hidden rotation_2 0 -1 0 4.257677167779747
+  translation -0.0005956865839775947 0.0719115867619846 -0.0002708173856924342
+  rotation 0.0029625025289347954 -0.0029622516570939166 0.9999912242834365 1.570806811730701
+  name "e-puck(1)"
+  controller "control"
+  turretSlot [
+    TouchSensor {
+      translation -1.3948117041223673e-07 -8.523636115496946e-12 -1.4983437665171129e-05
+      rotation 0.009989318013857626 0.9998487433908829 -0.014237410764971753 1.4201563035741174e-09
+      physics Physics {
+      }
+      type "force-3d"
+      lookupTable [
+        0 0 0
+        5000 5000 0
+      ]
+    }
+  ]
+}
